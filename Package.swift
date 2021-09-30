@@ -12,22 +12,14 @@ let package = Package(
     ],
     products: [
         .library(
-            name: "AltSign-Dynamic",
-            type: .dynamic,
+            name: "AltSign",
             targets: ["AltSign", "CAltSign", "CoreCrypto", "CCoreCrypto", "ldid", "ldid-core", "OpenSSL"]
         ),
-        .library(
-            name: "AltSign-Static",
-            targets: ["AltSign", "CAltSign", "CoreCrypto", "CCoreCrypto", "ldid", "ldid-core"]
-        ),
     ],
-    dependencies: [],
+    dependencies: [
+        .package(url: "https://github.com/krzyzanowskim/OpenSSL.git", .upToNextMinor(from: "1.1.1200")
+    ],
     targets: [
-        .binaryTarget(
-            name: "OpenSSL",
-            path: "Dependencies/OpenSSL/Frameworks/OpenSSL.xcframework"
-        ),
-        
         .target(
             name: "ldid-core",
             path: "Dependencies/ldid",
