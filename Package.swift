@@ -22,6 +22,7 @@ let package = Package(
     targets: [
         .target(
             name: "ldid-core",
+            dependencies: ["OpenSSL"],
             path: "Dependencies/ldid",
             exclude: [
                 "ldid.hpp",
@@ -69,7 +70,6 @@ let package = Package(
                 .headerSearchPath("libplist/include"),
                 .headerSearchPath("libplist/src"),
                 .headerSearchPath("libplist/libcnary/include"),
-                .headerSearchPath("../OpenSSL/ios/include"),
             ]
         ),
         .target(
@@ -88,7 +88,6 @@ let package = Package(
                 .headerSearchPath("../../Dependencies/ldid/libplist/include"),
                 .headerSearchPath("../../Dependencies/ldid/libplist/src"),
                 .headerSearchPath("../../Dependencies/ldid/libplist/libcnary/include"),
-                .headerSearchPath("../../Dependencies/OpenSSL/ios/include"),
             ]
         ),
         
@@ -142,7 +141,6 @@ let package = Package(
                 .headerSearchPath("AltSign/ldid"),
                 .headerSearchPath("Dependencies/minizip"),
                 .headerSearchPath("AltSign/Capabilities"),
-                .headerSearchPath("Dependencies/OpenSSL/ios/include"),
                 .headerSearchPath("Dependencies/ldid/libplist/include"),
                 .headerSearchPath("Dependencies/ldid"),
             ],

@@ -32,4 +32,5 @@ xcuserdata
 *.swiftpm
 
 ## SPM
+.build
 Package.resolved
