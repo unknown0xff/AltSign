@@ -17,6 +17,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (nullable NSURL *)unzipAppBundleAtURL:(NSURL *)ipaURL toDirectory:(NSURL *)directoryURL error:(NSError **)error;
 - (nullable NSURL *)zipAppBundleAtURL:(NSURL *)appBundleURL error:(NSError **)error;
 
+- (nullable NSURL *)zipAppBundleAtURL:(NSURL *)appBundleURL ipaURL:(NSURL *)ipaURL error:(NSError **)error;
 @end
 
 NS_ASSUME_NONNULL_END
